@@ -14,6 +14,11 @@ class Debate:
       thing = cmd.split(" ")
       if thing[1]=="contention" or thing[1] == "c":
         newContention(thing[2])
+      elif thing[1]=="point" or thing[1]=="p":
+        self.contentions[self.pointer[0]].newPoint(thing[2])
+      elif thing[1]=="warrant" or thing[1]=="w":
+        self.contentions[self.pointer[0]].addWarrant(self.pointer[1],thing[2])
+        
         
 
     
