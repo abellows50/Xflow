@@ -10,6 +10,11 @@ class Debate:
   def parse(self, cmd:str):
     if cmd == "exit":
       return False
+    elif "switch" in cmd:
+      thing = cmd.split(" ")
+      np = thing[1].split(".")
+      pointer[0] = np[0]
+      
     elif "new" in cmd:
       thing = cmd.split(" ")
       if thing[1]=="contention" or thing[1] == "c":
