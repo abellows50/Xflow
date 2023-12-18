@@ -1,7 +1,6 @@
 from colorama import Fore, Back, Style
 class Contention:
     def __init__(self, id, title):
-        self.id = 1
         self.title = "Contention"
         self.points = []
         self.id = id
