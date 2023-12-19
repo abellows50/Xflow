@@ -10,7 +10,10 @@ class Debate:
     self.contentions.append(Flow.Contention(len(self.contentions),name))
   
   def print(self):
-    os.system("cls")
+    try:
+      os.system("cls")
+    except:
+      os.system("clear")
     print(f"pointer: {self.pointer}")
     for contention in self.contentions:
       contention.printContention()
