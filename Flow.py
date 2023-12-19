@@ -17,7 +17,7 @@ class Contention:
         self.points[pointId].addImpact(impact)
     
     def printContention(self):
-        print(f"Contention: {self.title}")
+        print(Fore.WHITE + f"Contention {self.id}: {self.title}")
         for point in self.points:
             point.printPoint()
 
@@ -39,7 +39,7 @@ class Point:
         self.impacts.append(content)
     
     def printPoint(self):
-        print(Fore.GREEN + f"    Point: {self.header}")
+        print(Fore.GREEN + f"    Point {self.id}: {self.header}")
         for warrant in self.warrants:
             print(Fore.BLUE + f"        Warrant: {warrant}")
         for impact in self.impacts:
